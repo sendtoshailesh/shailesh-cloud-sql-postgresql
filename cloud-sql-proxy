@@ -1,0 +1,26 @@
+https://cloud.google.com/sql/docs/mysql/connect-admin-proxy
+
+gcloud sql connect my-instance --user=root
+
+gcloud sql connect pg-db1 --user=postgres
+
+
+./cloud_sql_proxy -instances=shailesh-1:asia-south1:pg-db1=tcp:5432 &
+
+./cloud_sql_proxy -instances=shailesh-1:asia-south1:pg-db1=tcp:5432 &
+./cloud_sql_proxy -enable_iam_login -instances=shailesh-1:asia-south1:pg-db1=tcp:5432 &
+
+psql -h 127.0.0.1 -U postgres postgres
+
+./cloud_sql_proxy -instances=shailesh-1:us-central1:mymart=tcp:3307 &
+
+./cloud_sql_proxy -instances=shailesh-1:us-central1:mymart=tcp:3306,shailesh-1:asia-south1:pg1=tcp:5432 &
+
+psql OPTIONS
+
+
+./cloud_sql_proxy -instances=serious-sylph-330414:us-central1:demoinstance:sql-1=tcp:0.0.0.0:1433
+
+
+
+
